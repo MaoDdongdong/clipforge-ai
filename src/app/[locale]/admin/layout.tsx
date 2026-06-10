@@ -5,17 +5,20 @@ import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 
 export default async function AdminLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const session = await getServerSession(authOptions);
 
   if (!session) {
-    redirect("/auth/login");
+    redirect(`/${locale}/auth/login`);
   }
 
   if (session.user.role !== "ADMIN") {
-    redirect("/dashboard");
+    redirect(`/${locale}/dashboard`);
   }
 
   return <DashboardShell>{children}</DashboardShell>;
