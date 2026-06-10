@@ -39,7 +39,7 @@ export function Sidebar() {
       <div className="p-6">
         <Link href="/en-US/dashboard" className="flex items-center gap-2 mb-8">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">CF</span>
+            <span className="text-black font-bold text-sm">CF</span>
           </div>
           <span className="font-bold text-lg">ClipForge AI</span>
         </Link>
@@ -56,7 +56,7 @@ export function Sidebar() {
                   "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                   isActive
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                    : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                 )}
               >
                 <Icon className="h-4 w-4" />
@@ -83,7 +83,7 @@ export function Sidebar() {
                       "flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
                       isActive
                         ? "bg-primary text-primary-foreground"
-                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        : "text-muted-foreground hover:bg-secondary hover:text-foreground"
                     )}
                   >
                     <Icon className="h-4 w-4" />

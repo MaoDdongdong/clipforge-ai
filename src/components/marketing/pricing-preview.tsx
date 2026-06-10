@@ -23,12 +23,12 @@ export function PricingPreview() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {plans.map((plan) => (
-            <Card key={plan} className="bg-card flex flex-col">
+            <Card key={plan} className="bg-card border-border flex flex-col">
               <CardHeader>
                 <CardTitle className="text-lg">{t(`${plan}.name`)}</CardTitle>
                 <div className="mt-4">
                   <span className="text-3xl font-bold">{t(`${plan}.price`)}</span>
-                  <span className="text-muted-foreground text-sm ml-2">
+                  <span className="text-sm text-muted-foreground ml-2">
                     {t(`${plan}.period`)}
                   </span>
                 </div>
@@ -38,7 +38,7 @@ export function PricingPreview() {
                 <ul className="space-y-2">
                   {(t.raw(`${plan}.features`) as string[]).map((feature, index) => (
                     <li key={index} className="flex items-start gap-2 text-sm">
-                      <Check className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}

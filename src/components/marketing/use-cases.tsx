@@ -22,7 +22,7 @@ export function UseCases() {
   ];
 
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
@@ -33,9 +33,9 @@ export function UseCases() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {cases.map((caseItem) => (
-            <Card key={caseItem.key} className="bg-card">
+            <Card key={caseItem.key} className="bg-card border-border">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center mb-4 text-primary">
                   {iconMap[caseItem.icon]}
                 </div>
                 <CardTitle className="text-lg">
@@ -43,7 +43,7 @@ export function UseCases() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-sm text-muted-foreground">
                   {t(`${caseItem.key}.description`)}
                 </p>
               </CardContent>

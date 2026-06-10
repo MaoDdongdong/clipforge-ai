@@ -14,7 +14,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CF</span>
+                <span className="text-black font-bold text-sm">CF</span>
               </div>
               <span className="font-bold text-lg">{t("appName")}</span>
             </div>

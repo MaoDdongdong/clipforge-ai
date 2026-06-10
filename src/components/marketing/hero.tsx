@@ -11,14 +11,14 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-background to-pink-900/20" />
-        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-1/3 h-1/3 bg-gradient-to-tr from-pink-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-background to-pink-900/30" />
+        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-1/3 h-1/3 bg-gradient-to-tr from-pink-500/20 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-sm font-medium mb-8 border border-border">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -50,11 +50,11 @@ export function Hero() {
           </div>
 
          <div className="mt-16 relative">
-            <div className="relative mx-auto max-w-3xl rounded-xl border bg-card shadow-2xl">
-              <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 p-6 flex items-center justify-center">
+            <div className="relative mx-auto max-w-3xl rounded-xl border border-border bg-card shadow-2xl">
+              <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-6 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4">
-                    <Play className="h-8 w-8 text-white ml-1" />
+                  <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center mb-4">
+                    <Play className="h-8 w-8 text-black ml-1" />
                   </div>
                   <p className="text-muted-foreground">Dashboard Preview</p>
                 </div>

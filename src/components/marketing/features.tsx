@@ -17,34 +17,16 @@ export function Features() {
   const t = useTranslations("home.features");
 
   const features = [
-    {
-      key: "aiScriptRewrite",
-      icon: "ai-script-rewrite",
-    },
-    {
-      key: "storyboardGeneration",
-      icon: "storyboard-generation",
-    },
-    {
-      key: "visualPromptBuilder",
-      icon: "visual-prompt-builder",
-    },
-    {
-      key: "subtitleAssets",
-      icon: "subtitle-assets",
-    },
-    {
-      key: "mockExportWorkflow",
-      icon: "mock-export-workflow",
-    },
-    {
-      key: "bilingualCreation",
-      icon: "bilingual-creation",
-    },
+    { key: "aiScriptRewrite", icon: "ai-script-rewrite" },
+    { key: "storyboardGeneration", icon: "storyboard-generation" },
+    { key: "visualPromptBuilder", icon: "visual-prompt-builder" },
+    { key: "subtitleAssets", icon: "subtitle-assets" },
+    { key: "mockExportWorkflow", icon: "mock-export-workflow" },
+    { key: "bilingualCreation", icon: "bilingual-creation" },
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/50">
+    <section id="features" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
@@ -55,9 +37,9 @@ export function Features() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature) => (
-            <Card key={feature.key} className="bg-card">
+            <Card key={feature.key} className="bg-card border-border">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                <div className="h-12 w-12 rounded-lg bg-secondary flex items-center justify-center mb-4 text-primary">
                   {iconMap[feature.icon]}
                 </div>
                 <CardTitle className="text-xl">
