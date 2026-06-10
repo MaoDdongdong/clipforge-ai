@@ -16,7 +16,7 @@ import { format } from "date-fns";
 export default async function AdminUsersPage() {
   const session = await getServerSession(authOptions);
   if (!session || session.user.role !== "ADMIN") {
-    redirect("/en-US/dashboard");
+    redirect("/dashboard");
   }
 
   const users = await db.user.findMany({

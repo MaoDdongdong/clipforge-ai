@@ -14,17 +14,18 @@ export function AdminSidebar() {
   const t = useTranslations("admin.menu");
   const pathname = usePathname();
 
+  // Use relative paths - next-intl Link will prepend current locale
   const menuItems = [
-    { href: "/en-US/admin", icon: LayoutDashboard, label: t("overview") },
-    { href: "/en-US/admin/users", icon: Users, label: t("users") },
-    { href: "/en-US/admin/tasks", icon: ListTodo, label: t("tasks") },
-    { href: "/en-US/admin/models", icon: Cpu, label: t("models") },
+    { href: "/admin", icon: LayoutDashboard, label: t("overview") },
+    { href: "/admin/users", icon: Users, label: t("users") },
+    { href: "/admin/tasks", icon: ListTodo, label: t("tasks") },
+    { href: "/admin/models", icon: Cpu, label: t("models") },
   ];
 
   return (
     <aside className="w-64 min-h-screen border-r bg-card">
       <div className="p-6">
-        <Link href="/en-US/admin" className="flex items-center gap-2 mb-8">
+        <Link href="/admin" className="flex items-center gap-2 mb-8">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
             <span className="text-black font-bold text-sm">CF</span>
           </div>

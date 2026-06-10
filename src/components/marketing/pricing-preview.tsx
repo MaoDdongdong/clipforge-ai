@@ -45,7 +45,7 @@ export function PricingPreview() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Link href="/en-US/auth/register" className="w-full">
+                <Link href="/auth/register" className="w-full">
                   <Button className="w-full" variant={plan === "pro" ? "default" : "outline"}>
                     {t("getStarted")}
                   </Button>

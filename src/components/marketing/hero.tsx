@@ -35,7 +35,7 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/en-US/dashboard/new">
+            <Link href="/dashboard/new">
               <Button size="lg" className="h-12 px-8 text-base">
                 {t("primaryCta")}
                 <ArrowRight className="ml-2 h-4 w-4" />

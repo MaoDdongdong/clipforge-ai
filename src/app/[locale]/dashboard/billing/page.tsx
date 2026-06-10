@@ -9,7 +9,7 @@ import { format } from "date-fns";
 export default async function BillingPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
-    redirect("/en-US/auth/login");
+    redirect("/auth/login");
   }
 
   const user = await db.user.findUnique({
@@ -23,7 +23,7 @@ export default async function BillingPage() {
   });
 
   if (!user) {
-    redirect("/en-US/auth/login");
+    redirect("/auth/login");
   }
 
   return (

@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 export default async function VoicesPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
-    redirect("/en-US/auth/login");
+    redirect("/auth/login");
   }
 
   const voices = await db.voice.findMany({

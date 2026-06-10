@@ -11,7 +11,7 @@ export default async function TaskDetailPage({
 }) {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
-    redirect("/en-US/auth/login");
+    redirect("/auth/login");
   }
 
   const { id } = await params;
@@ -26,12 +26,12 @@ export default async function TaskDetailPage({
   });
 
   if (!task) {
-    redirect("/en-US/dashboard/tasks");
+    redirect("/dashboard/tasks");
   }
 
   // Check ownership
   if (task.userId !== session.user.id && session.user.role !== "ADMIN") {
-    redirect("/en-US/dashboard/tasks");
+    redirect("/dashboard/tasks");
   }
 
   return (

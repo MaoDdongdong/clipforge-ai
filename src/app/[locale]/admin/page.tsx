@@ -8,7 +8,7 @@ import { Users, ListTodo, CheckCircle, XCircle } from "lucide-react";
 export default async function AdminPage() {
   const session = await getServerSession(authOptions);
   if (!session || session.user.role !== "ADMIN") {
-    redirect("/en-US/dashboard");
+    redirect("/dashboard");
   }
 
   const [userCount, taskCount, completedCount, failedCount] = await Promise.all([

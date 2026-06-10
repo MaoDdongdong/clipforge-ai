@@ -11,7 +11,7 @@ import { Plus } from "lucide-react";
 export default async function TasksPage() {
   const session = await getServerSession(authOptions);
   if (!session?.user) {
-    redirect("/en-US/auth/login");
+    redirect("/auth/login");
   }
 
   const tasks = await db.videoTask.findMany({
@@ -23,7 +23,7 @@ export default async function TasksPage() {
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">My Tasks</h1>
-        <Link href="/en-US/dashboard/new">
+        <Link href="/dashboard/new">
           <Button>
             <Plus className="h-4 w-4 mr-2" />
             New Project
@@ -38,7 +38,7 @@ export default async function TasksPage() {
             <p className="text-muted-foreground mb-6">
               Create your first project to get started
             </p>
-            <Link href="/en-US/dashboard/new">
+            <Link href="/dashboard/new">
               <Button>
                 <Plus className="h-4 w-4 mr-2" />
                 Create New Project

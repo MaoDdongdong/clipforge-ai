@@ -29,7 +29,7 @@ export default async function DashboardPage() {
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        <Link href="/en-US/dashboard/new">
+        <Link href="/dashboard/new">
           <Button>
             <Plus className="h-4 w-4 mr-2" />
             New Project
@@ -97,13 +97,13 @@ export default async function DashboardPage() {
           <CardTitle>Quick Actions</CardTitle>
         </CardHeader>
         <CardContent className="flex gap-4">
-          <Link href="/en-US/dashboard/new">
+          <Link href="/dashboard/new">
             <Button variant="outline">
               <Plus className="h-4 w-4 mr-2" />
               Create New Project
             </Button>
           </Link>
-          <Link href="/en-US/dashboard/tasks">
+          <Link href="/dashboard/tasks">
             <Button variant="outline">
               <ListTodo className="h-4 w-4 mr-2" />
               View All Tasks

@@ -63,7 +63,7 @@ export function TaskCard({ task }: TaskCardProps) {
             <span>{format(new Date(task.createdAt), "MMM d, yyyy")}</span>
           </div>
 
-          <Link href={`/en-US/dashboard/tasks/${task.id}`}>
+          <Link href={`/dashboard/tasks/${task.id}`}>
             <Button variant="outline" size="sm" className="w-full mt-2">
               <Eye className="h-4 w-4 mr-2" />
               {t("actions")}
