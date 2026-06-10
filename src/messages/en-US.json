@@ -1,0 +1,368 @@
+{
+  "common": {
+    "appName": "ClipForge AI",
+    "tagline": "Turn scripts into short videos with AI",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "view": "View",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "copy": "Copy",
+    "copied": "Copied"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log In",
+    "register": "Sign Up",
+    "dashboard": "Dashboard",
+    "logout": "Log Out"
+  },
+  "home": {
+    "hero": {
+      "title": "Turn any script into a short video with AI",
+      "subtitle": "Rewrite scripts, generate storyboards, create visual prompts, subtitles, and export-ready assets in minutes.",
+      "primaryCta": "Start Creating",
+      "secondaryCta": "Explore Features"
+    },
+    "features": {
+      "title": "Powerful AI Features",
+      "subtitle": "Everything you need to create professional short videos",
+      "aiScriptRewrite": {
+        "title": "AI Script Rewriting",
+        "description": "Transform your raw script into engaging narration with AI-powered rewriting"
+      },
+      "storyboardGeneration": {
+        "title": "Storyboard Generation",
+        "description": "Automatically generate scene-by-scene storyboards from your script"
+      },
+      "visualPromptBuilder": {
+        "title": "Visual Prompt Builder",
+        "description": "Create detailed image prompts for each scene to generate stunning visuals"
+      },
+      "subtitleAssets": {
+        "title": "Subtitle Assets",
+        "description": "Generate timed subtitles with multiple language support"
+      },
+      "mockExportWorkflow": {
+        "title": "Mock Export Workflow",
+        "description": "Preview your video with mock assets before final export"
+      },
+      "bilingualCreation": {
+        "title": "Bilingual Creation",
+        "description": "Create content in English or Chinese with automatic translation"
+      }
+    },
+    "workflow": {
+      "title": "How It Works",
+      "subtitle": "Three simple steps to create your short video",
+      "step1": {
+        "title": "Paste Your Script",
+        "description": "Enter your original script text in any language"
+      },
+      "step2": {
+        "title": "Generate AI Storyboard",
+        "description": "Let AI rewrite your script and create a complete storyboard"
+      },
+      "step3": {
+        "title": "Review and Export",
+        "description": "Preview scenes, edit details, and export your assets"
+      }
+    },
+    "useCases": {
+      "title": "Perfect for Every Creator",
+      "subtitle": "Create engaging short videos for any purpose",
+      "socialMedia": {
+        "title": "Social Media",
+        "description": "Create viral content for TikTok, Instagram Reels, and YouTube Shorts"
+      },
+      "education": {
+        "title": "Education",
+        "description": "Make learning engaging with animated educational content"
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Produce compelling product demos and promotional videos"
+      },
+      "storytelling": {
+        "title": "Storytelling",
+        "description": "Bring your stories to life with cinematic visuals"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How does AI script rewriting work?",
+        "answer": "Our AI analyzes your script and rewrites it for optimal short-form video narration, ensuring engaging content that maintains your original message."
+      },
+      "q2": {
+        "question": "What languages are supported?",
+        "answer": "We currently support English and Simplified Chinese for both input and output, with bilingual subtitle capabilities."
+      },
+      "q3": {
+        "question": "How long does video generation take?",
+        "answer": "The mock generation process typically completes within a few minutes, depending on the video duration and complexity."
+      },
+      "q4": {
+        "question": "Can I customize the visual style?",
+        "answer": "Yes! Choose from multiple visual styles including cinematic, realistic, anime, oil painting, and more."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that fits your needs",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "forever",
+      "credits": "100 credits",
+      "features": [
+        "Basic generation",
+        "Watermarked mock exports",
+        "Standard processing"
+      ]
+    },
+    "creator": {
+      "name": "Creator",
+      "price": "$19",
+      "period": "per month",
+      "credits": "2,000 credits",
+      "features": [
+        "No watermark",
+        "HD export placeholder",
+        "Priority generation",
+        "Email support"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "$49",
+      "period": "per month",
+      "credits": "8,000 credits",
+      "features": [
+        "Batch projects placeholder",
+        "Advanced voices placeholder",
+        "Priority queue",
+        "24/7 support"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "contact us",
+      "credits": "Unlimited",
+      "features": [
+        "Team workspace placeholder",
+        "API access placeholder",
+        "Private deployment placeholder",
+        "Dedicated account manager"
+      ]
+    },
+    "getStarted": "Get Started"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your account to continue",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Sign up"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Start creating amazing short videos today",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "newProject": "New Project",
+      "tasks": "Tasks",
+      "assets": "Assets",
+      "voiceLibrary": "Voice Library",
+      "credits": "Credits",
+      "settings": "Settings"
+    },
+    "home": {
+      "title": "Dashboard",
+      "welcome": "Welcome back",
+      "availableCredits": "Available Credits",
+      "totalTasks": "Total Tasks",
+      "completedTasks": "Completed",
+      "failedTasks": "Failed",
+      "createProject": "Create New Project",
+      "recentTasks": "Recent Tasks"
+    },
+    "newTask": {
+      "title": "Create New Project",
+      "form": {
+        "title": "Project Title",
+        "titlePlaceholder": "Enter project title",
+        "originalText": "Original Script",
+        "originalTextPlaceholder": "Paste your script here (minimum 20 characters)...",
+        "category": "Category",
+        "selectCategory": "Select category",
+        "inputLanguage": "Input Language",
+        "outputLanguage": "Output Language",
+        "subtitleLanguage": "Subtitle Language",
+        "bilingualSubtitles": "Bilingual Subtitles",
+        "secondarySubtitleLanguage": "Secondary Subtitle Language",
+        "aspectRatio": "Aspect Ratio",
+        "visualStyle": "Visual Style",
+        "voice": "Narration Voice",
+        "duration": "Duration",
+        "generationMode": "Generation Mode",
+        "fast": "Fast",
+        "standard": "Standard",
+        "advanced": "Advanced",
+        "submit": "Create Project"
+      }
+    },
+    "taskList": {
+      "title": "My Tasks",
+      "empty": {
+        "title": "No tasks yet",
+        "description": "Create your first project to get started"
+      },
+      "table": {
+        "title": "Title",
+        "status": "Status",
+        "progress": "Progress",
+        "language": "Language",
+        "category": "Category",
+        "created": "Created",
+        "actions": "Actions"
+      }
+    },
+    "taskDetail": {
+      "title": "Task Details",
+      "status": "Status",
+      "progress": "Progress",
+      "createdAt": "Created",
+      "outputLanguage": "Output Language",
+      "category": "Category",
+      "visualStyle": "Visual Style",
+      "generate": "Generate Video",
+      "generating": "Generating...",
+      "originalScript": "Original Script",
+      "rewrittenScript": "Rewritten Script",
+      "videoPreview": "Video Preview",
+      "publishAssets": "Publish Assets",
+      "publishTitle": "Title",
+      "publishDescription": "Description",
+      "hashtags": "Hashtags",
+      "scenes": "Scenes",
+      "sceneIndex": "Scene",
+      "sceneDuration": "Duration",
+      "voiceover": "Voiceover",
+      "subtitle": "Subtitle",
+      "secondarySubtitle": "Secondary Subtitle",
+      "visualDescription": "Visual Description",
+      "imagePrompt": "Image Prompt",
+      "cameraMotion": "Camera Motion",
+      "transition": "Transition"
+    },
+    "assets": {
+      "title": "My Assets",
+      "empty": {
+        "title": "No assets yet",
+        "description": "Your generated video assets will appear here"
+      }
+    },
+    "voices": {
+      "title": "Voice Library",
+      "language": "Language",
+      "gender": "Gender",
+      "style": "Style"
+    },
+    "billing": {
+      "title": "Credits & Billing",
+      "currentPlan": "Current Plan",
+      "creditsBalance": "Credits Balance",
+      "transactionHistory": "Transaction History",
+      "amount": "Amount",
+      "type": "Type",
+      "description": "Description",
+      "date": "Date",
+      "emptyTransactions": "No transactions yet"
+    },
+    "settings": {
+      "title": "Account Settings",
+      "email": "Email",
+      "name": "Name",
+      "preferredLanguage": "Preferred Language",
+      "updateSettings": "Update Settings"
+    }
+  },
+  "admin": {
+    "menu": {
+      "overview": "Overview",
+      "users": "Users",
+      "tasks": "Tasks",
+      "models": "AI Models"
+    },
+    "overview": {
+      "title": "Admin Dashboard",
+      "totalUsers": "Total Users",
+      "totalTasks": "Total Tasks",
+      "completedTasks": "Completed Tasks",
+      "failedTasks": "Failed Tasks",
+      "totalCreditsConsumed": "Total Credits Consumed"
+    },
+    "users": {
+      "title": "Users",
+      "email": "Email",
+      "role": "Role",
+      "plan": "Plan",
+      "credits": "Credits",
+      "createdAt": "Created At"
+    },
+    "tasks": {
+      "title": "Tasks",
+      "taskTitle": "Title",
+      "user": "User",
+      "status": "Status",
+      "language": "Language",
+      "createdAt": "Created At"
+    },
+    "models": {
+      "title": "AI Model Configuration",
+      "provider": "AI Provider",
+      "model": "Model",
+      "status": "Status",
+      "configured": "Configured",
+      "notConfigured": "Not Configured"
+    }
+  },
+  "status": {
+    "PENDING": "Pending",
+    "REWRITING": "Rewriting",
+    "STORYBOARDING": "Storyboarding",
+    "GENERATING_ASSETS": "Generating Assets",
+    "VOICEOVER": "Voiceover",
+    "SUBTITLES": "Subtitles",
+    "COMPOSING": "Composing",
+    "COMPLETED": "Completed",
+    "FAILED": "Failed"
+  }
+}

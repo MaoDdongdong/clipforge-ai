@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+enum PlanType {
+  FREE
+  CREATOR
+  PRO
+  ENTERPRISE
+}
+
+enum TaskStatus {
+  PENDING
+  REWRITING
+  STORYBOARDING
+  GENERATING_ASSETS
+  VOICEOVER
+  SUBTITLES
+  COMPOSING
+  COMPLETED
+  FAILED
+}
+
+model User {
+  id String @id @default(cuid())
+  email String    @unique
+  passwordHash     String
+  name String?
+  avatarUrl        String?
+  role UserRole  @default(USER)
+  plan PlanType  @default(FREE)
+  credits          Int       @default(100)
+  preferredLanguage String   @default("en-US")
+  countryCode      String?
+  timezone         String?
+  currency         String    @default("USD")
+  tasks VideoTask[]
+  creditTransactions CreditTransaction[]
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model VideoTask {
+  id String      @id @default(cuid())
+  userId                  String
+  user                    User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title                   String
+  originalText            String
+  rewrittenText           String?
+  category String
+  inputLanguage           String      @default("auto")
+  outputLanguage String      @default("en-US")
+  subtitleLanguage        String?
+  secondarySubtitleLanguage String?
+  bilingualSubtitles      Boolean     @default(false)
+  voiceLanguage            String?
+  aspectRatio              String      @default("9:16")
+  visualStyle              String      @default("cinematic")
+  voiceId                  String      @default("en_calm_narrator")
+  duration Int         @default(60)
+  generationMode           String      @default("standard")
+  status                   TaskStatus  @default(PENDING)
+  progress Int         @default(0)
+  errorMessage             String?
+  outputVideoUrl           String?
+  coverUrl                 String?
+  publishTitle             String?
+  publishDescription       String?
+  hashtags String[]
+  scenes                   VideoScene[]
+  createdAt                DateTime    @default(now())
+  updatedAt                DateTime    @updatedAt
+}
+
+model VideoScene {
+  id               String    @id @default(cuid())
+  taskId           String
+  task VideoTask @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  sceneIndex       Int
+  voiceover        String
+  subtitle String
+  secondarySubtitle String?
+  visualDescription String
+  imagePrompt String
+  negativePrompt   String?
+  imageUrl         String?
+  videoUrl         String?
+  audioUrl         String?
+  duration         Float
+  cameraMotion     String?
+  transition String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+}
+
+model Voice {
+  id               String    @id @default(cuid())
+  name             String
+  displayNameZh    String
+  displayNameEn    String
+  provider         String
+  providerVoiceId  String
+  language String
+  gender String
+  style String
+  previewUrl       String?
+  isPrivate        Boolean   @default(false)
+  userId           String?
+  createdAt        DateTime  @default(now())
+}
+
+model CreditTransaction {
+  id String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount      Int
+  type        String
+  description String
+  taskId      String?
+  createdAt   DateTime  @default(now())
+}

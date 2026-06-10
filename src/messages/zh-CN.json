@@ -1,0 +1,368 @@
+{
+  "common": {
+    "appName": "ClipForge AI",
+    "tagline": "用 AI 将文案生成短视频",
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "submit": "提交",
+    "back": "返回",
+    "next": "下一步",
+    "view": "查看",
+    "close": "关闭",
+    "search": "搜索",
+    "filter": "筛选",
+    "export": "导出",
+    "copy": "复制",
+    "copied": "已复制"
+  },
+  "nav": {
+    "home": "首页",
+    "features": "功能",
+    "pricing": "价格",
+    "faq": "常见问题",
+    "login": "登录",
+    "register": "注册",
+    "dashboard": "控制台",
+    "logout": "退出"
+  },
+  "home": {
+    "hero": {
+      "title": "输入一段文案，AI 自动生成短视频",
+      "subtitle": "从脚本改写、分镜设计、画面提示词、字幕到视频资产，全流程自动完成。",
+      "primaryCta": "开始创作",
+      "secondaryCta": "查看功能"
+    },
+    "features": {
+      "title": "强大的 AI 功能",
+      "subtitle": "创建专业短视频所需的一切工具",
+      "aiScriptRewrite": {
+        "title": "AI 文案改写",
+        "description": "将原始文案转换为引人入胜的旁白叙述"
+      },
+      "storyboardGeneration": {
+        "title": "自动分镜生成",
+        "description": "从文案自动生成逐场景的分镜脚本"
+      },
+      "visualPromptBuilder": {
+        "title": "画面提示词生成",
+        "description": "为每个场景创建详细的图像提示词"
+      },
+      "subtitleAssets": {
+        "title": "字幕资产生成",
+        "description": "生成带时间轴的字幕，支持多语言"
+      },
+      "mockExportWorkflow": {
+        "title": "导出流程预览",
+        "description": "在最终导出前预览视频效果"
+      },
+      "bilingualCreation": {
+        "title": "中英文创作",
+        "description": "支持英文和中文内容创作，自动翻译"
+      }
+    },
+    "workflow": {
+      "title": "使用流程",
+      "subtitle": "三个简单步骤创建您的短视频",
+      "step1": {
+        "title": "粘贴文案",
+        "description": "输入任意语言的原始文案"
+      },
+      "step2": {
+        "title": "生成 AI 分镜",
+        "description": "让 AI 改写文案并创建完整分镜"
+      },
+      "step3": {
+        "title": "预览并导出",
+        "description": "预览场景、编辑细节、导出资产"
+      }
+    },
+    "useCases": {
+      "title": "适合每一位创作者",
+      "subtitle": "为各种用途创建吸引人的短视频",
+      "socialMedia": {
+        "title": "社交媒体",
+        "description": "为抖音、Instagram Reels、YouTube Shorts 创建病毒式内容"
+      },
+      "education": {
+        "title": "知识科普",
+        "description": "用动画科普内容让学习变得有趣"
+      },
+      "marketing": {
+        "title": "商业营销",
+        "description": "制作引人注目的产品演示和推广视频"
+      },
+      "storytelling": {
+        "title": "故事叙事",
+        "description": "用电影级视觉特效让您的故事栩栩如生"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": {
+        "question": "AI 文案改写是如何工作的？",
+        "answer": "我们的 AI 分析您的文案并为短视频旁述进行优化改写，确保内容引人入胜同时保留您的原始信息。"
+      },
+      "q2": {
+        "question": "支持哪些语言？",
+        "answer": "我们目前支持英文和简体中文的输入输出，并提供双语字幕功能。"
+      },
+      "q3": {
+        "question": "视频生成需要多长时间？",
+        "answer": "模拟生成过程通常在几分钟内完成，具体取决于视频时长和复杂度。"
+      },
+      "q4": {
+        "question": "我可以自定义视觉风格吗？",
+        "answer": "当然可以！您可以从多种视觉风格中选择，包括电影质感、写实摄影、动漫插画、油画风格等。"
+      }
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "选择适合您需求的方案",
+    "free": {
+      "name": "免费版",
+      "price": "$0",
+      "period": "永久免费",
+      "credits": "100 积分",
+      "features": [
+        "基础生成",
+        "带水印的模拟导出",
+        "标准处理"
+      ]
+    },
+    "creator": {
+      "name": "创作者版",
+      "price": "$19",
+      "period": "每月",
+      "credits": "2,000 积分",
+      "features": [
+        "无水印",
+        "高清导出占位",
+        "优先生成",
+        "邮件支持"
+      ]
+    },
+    "pro": {
+      "name": "专业版",
+      "price": "$49",
+      "period": "每月",
+      "credits": "8,000 积分",
+      "features": [
+        "批量项目占位",
+        "高级音色占位",
+        "优先队列",
+        "24/7 支持"
+      ]
+    },
+    "enterprise": {
+      "name": "企业版",
+      "price": "定制",
+      "period": "联系我们",
+      "credits": "无限积分",
+      "features": [
+        "团队工作区占位",
+        "API 访问占位",
+        "私有部署占位",
+        "专属客户经理"
+      ]
+    },
+    "getStarted": "立即开始"
+  },
+  "auth": {
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "登录您的账户以继续",
+      "email": "邮箱",
+      "password": "密码",
+      "submit": "登录",
+      "noAccount": "还没有账户？",
+      "registerLink": "立即注册"
+    },
+    "register": {
+      "title": "创建账户",
+      "subtitle": "立即开始创建精彩的短视频",
+      "name": "姓名",
+      "email": "邮箱",
+      "password": "密码",
+      "confirmPassword": "确认密码",
+      "submit": "创建账户",
+      "hasAccount": "已有账户？",
+      "loginLink": "立即登录"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "newProject": "新建任务",
+      "tasks": "任务列表",
+      "assets": "我的素材",
+      "voiceLibrary": "声音库",
+      "credits": "账户额度",
+      "settings": "设置"
+    },
+    "home": {
+      "title": "控制台",
+      "welcome": "欢迎回来",
+      "availableCredits": "可用积分",
+      "totalTasks": "总任务数",
+      "completedTasks": "已完成",
+      "failedTasks": "失败",
+      "createProject": "创建新任务",
+      "recentTasks": "最近任务"
+    },
+    "newTask": {
+      "title": "创建新任务",
+      "form": {
+        "title": "项目标题",
+        "titlePlaceholder": "输入项目标题",
+        "originalText": "原始文案",
+        "originalTextPlaceholder": "在此粘贴您的文案（至少20个字符）...",
+        "category": "类别",
+        "selectCategory": "选择类别",
+        "inputLanguage": "输入语言",
+        "outputLanguage": "输出语言",
+        "subtitleLanguage": "字幕语言",
+        "bilingualSubtitles": "双语字幕",
+        "secondarySubtitleLanguage": "第二字幕语言",
+        "aspectRatio": "画面比例",
+        "visualStyle": "视觉风格",
+        "voice": "旁白音色",
+        "duration": "时长",
+        "generationMode": "生成模式",
+        "fast": "快速",
+        "standard": "标准",
+        "advanced": "高级",
+        "submit": "创建项目"
+      }
+    },
+    "taskList": {
+      "title": "我的任务",
+      "empty": {
+        "title": "暂无任务",
+        "description": "创建您的第一个项目开始使用"
+      },
+      "table": {
+        "title": "标题",
+        "status": "状态",
+        "progress": "进度",
+        "language": "语言",
+        "category": "类别",
+        "created": "创建时间",
+        "actions": "操作"
+      }
+    },
+    "taskDetail": {
+      "title": "任务详情",
+      "status": "状态",
+      "progress": "进度",
+      "createdAt": "创建时间",
+      "outputLanguage": "输出语言",
+      "category": "类别",
+      "visualStyle": "视觉风格",
+      "generate": "生成视频",
+      "generating": "生成中...",
+      "originalScript": "原始文案",
+      "rewrittenScript": "改写后文案",
+      "videoPreview": "视频预览",
+      "publishAssets": "发布素材",
+      "publishTitle": "标题",
+      "publishDescription": "描述",
+      "hashtags": "话题标签",
+      "scenes": "分镜列表",
+      "sceneIndex": "场景",
+      "sceneDuration": "时长",
+      "voiceover": "旁白",
+      "subtitle": "字幕",
+      "secondarySubtitle": "第二字幕",
+      "visualDescription": "视觉描述",
+      "imagePrompt": "图像提示词",
+      "cameraMotion": "镜头运动",
+      "transition": "转场"
+    },
+    "assets": {
+      "title": "我的素材",
+      "empty": {
+        "title": "暂无素材",
+        "description": "您生成的视频素材将显示在这里"
+      }
+    },
+    "voices": {
+      "title": "声音库",
+      "language": "语言",
+      "gender": "性别",
+      "style": "风格"
+    },
+    "billing": {
+      "title": "积分与账单",
+      "currentPlan": "当前方案",
+      "creditsBalance": "积分余额",
+      "transactionHistory": "交易记录",
+      "amount": "金额",
+      "type": "类型",
+      "description": "描述",
+      "date": "日期",
+      "emptyTransactions": "暂无交易记录"
+    },
+    "settings": {
+      "title": "账户设置",
+      "email": "邮箱",
+      "name": "姓名",
+      "preferredLanguage": "偏好语言",
+      "updateSettings": "更新设置"
+    }
+  },
+  "admin": {
+    "menu": {
+      "overview": "概览",
+      "users": "用户",
+      "tasks": "任务",
+      "models": "AI 模型"
+    },
+    "overview": {
+      "title": "管理后台",
+      "totalUsers": "用户总数",
+      "totalTasks": "任务总数",
+      "completedTasks": "已完成任务",
+      "failedTasks": "失败任务",
+      "totalCreditsConsumed": "总消耗积分"
+    },
+    "users": {
+      "title": "用户管理",
+      "email": "邮箱",
+      "role": "角色",
+      "plan": "方案",
+      "credits": "积分",
+      "createdAt": "注册时间"
+    },
+    "tasks": {
+      "title": "任务管理",
+      "taskTitle": "标题",
+      "user": "用户",
+      "status": "状态",
+      "language": "语言",
+      "createdAt": "创建时间"
+    },
+    "models": {
+      "title": "AI 模型配置",
+      "provider": "AI 提供商",
+      "model": "模型",
+      "status": "状态",
+      "configured": "已配置",
+      "notConfigured": "未配置"
+    }
+  },
+  "status": {
+    "PENDING": "待处理",
+    "REWRITING": "文案改写中",
+    "STORYBOARDING": "分镜生成中",
+    "GENERATING_ASSETS": "素材生成中",
+    "VOICEOVER": "配音处理中",
+    "SUBTITLES": "字幕生成中",
+    "COMPOSING": "视频合成中",
+    "COMPLETED": "已完成",
+    "FAILED": "失败"
+  }
+}
