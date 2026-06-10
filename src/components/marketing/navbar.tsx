@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { useSession, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,13 +40,13 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/"
-              className="text-sm font-medium hover:text-primary"
+              className="text-sm font-medium hover:text-foreground"
             >
               {t("home")}
             </Link>
             <Link
               href="/pricing"
-              className="text-sm font-medium hover:text-primary"
+              className="text-sm font-medium hover:text-foreground"
             >
               {t("pricing")}
             </Link>
