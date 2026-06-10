@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -20,7 +20,13 @@ export default function LoginPage() {
   const t = useTranslations("auth.login");
   const tNav = useTranslations("nav");
   const router = useRouter();
+  const pathname = usePathname();
   const { toast } = useToast();
+
+  // Extract locale from pathname for dynamic redirects
+  const validLocales = ["en-US", "zh-CN"];
+  const pathnameLocale = pathname?.split("/")[1];
+  const locale = validLocales.includes(pathnameLocale) ? pathnameLocale : "en-US";
 
   const {
     register,
@@ -47,7 +53,7 @@ export default function LoginPage() {
         return;
       }
 
-      router.push("/en-US/dashboard");
+      router.push(`/${locale}/dashboard`);
     } catch {
       toast({
         title: "Login failed",
@@ -97,7 +103,7 @@ export default function LoginPage() {
         </CardContent>
         <CardFooter className="text-center text-sm text-muted-foreground justify-center">
           {t("noAccount")}{" "}
-          <Link href="/en-US/auth/register" className="text-primary hover:underline ml-1">
+          <Link href={`/${locale}/auth/register`} className="text-primary hover:underline ml-1">
             {t("registerLink")}
           </Link>
         </CardFooter>

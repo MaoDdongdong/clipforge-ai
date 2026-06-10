@@ -4,12 +4,6 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import { useSession, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -20,17 +14,17 @@ export function Navbar() {
   const { data: session } = useSession();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: "/", label: tHome("hero.title").substring(0, 20) + "..." },
-    { href: "/pricing", label: t("pricing") },
-    { href: "/auth/login", label: t("login") },
-  ];
+  // Extract locale from pathname for logo link - validate against known locales
+  const validLocales = ["en-US", "zh-CN"];
+  const pathnameLocale = pathname?.split("/")[1];
+  const locale = validLocales.includes(pathnameLocale) ? pathnameLocale : "en-US";
+  const logoHref = `/${locale}`;
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={logoHref} className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
               <span className="text-black font-bold text-sm">CF</span>
             </div>
@@ -38,16 +32,10 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className="text-sm font-medium hover:text-foreground"
-            >
+            <Link href={logoHref} className="text-sm font-medium hover:text-foreground">
               {t("home")}
             </Link>
-            <Link
-              href="/pricing"
-              className="text-sm font-medium hover:text-foreground"
-            >
+            <Link href={`/${locale}/pricing`} className="text-sm font-medium hover:text-foreground">
               {t("pricing")}
             </Link>
           </div>
@@ -56,27 +44,23 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           {session ? (
             <div className="flex items-center gap-4">
-              <Link href="/en-US/dashboard">
+              <Link href={`/${locale}/dashboard`}>
                 <Button variant="ghost" size="sm">
                   {t("dashboard")}
                 </Button>
               </Link>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => signOut()}
-              >
+              <Button variant="ghost" size="sm" onClick={() => signOut()}>
                 {t("logout")}
               </Button>
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <Link href="/en-US/auth/login">
+              <Link href={`/${locale}/auth/login`}>
                 <Button variant="ghost" size="sm">
                   {t("login")}
                 </Button>
               </Link>
-              <Link href="/en-US/auth/register">
+              <Link href={`/${locale}/auth/register`}>
                 <Button size="sm">{t("register")}</Button>
               </Link>
             </div>
@@ -94,34 +78,18 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-background">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-            <Link
-              href="/"
-              className="text-sm font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link href={logoHref} className="text-sm font-medium">
               {t("home")}
             </Link>
-            <Link
-              href="/pricing"
-              className="text-sm font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link href={`/${locale}/pricing`} className="text-sm font-medium">
               {t("pricing")}
             </Link>
             {!session && (
               <>
-                <Link
-                  href="/en-US/auth/login"
-                  className="text-sm font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link href={`/${locale}/auth/login`} className="text-sm font-medium">
                   {t("login")}
                 </Link>
-                <Link
-                  href="/en-US/auth/register"
-                  className="text-sm font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link href={`/${locale}/auth/register`} className="text-sm font-medium">
                   {t("register")}
                 </Link>
               </>

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import {
@@ -55,7 +55,13 @@ export function NewTaskForm() {
   const t = useTranslations("dashboard.newTask.form");
   const tCommon = useTranslations("common");
   const router = useRouter();
+  const pathname = usePathname();
   const { toast } = useToast();
+
+  // Extract locale from pathname for dynamic redirects
+  const validLocales = ["en-US", "zh-CN"];
+  const pathnameLocale = pathname?.split("/")[1];
+  const locale = validLocales.includes(pathnameLocale) ? pathnameLocale : "en-US";
 
   const {
     register,
@@ -108,7 +114,7 @@ export function NewTaskForm() {
         description: "Project created successfully",
       });
 
-      router.push(`/en-US/dashboard/tasks/${task.id}`);
+      router.push(`/${locale}/dashboard/tasks/${task.id}`);
     } catch (error) {
       toast({
         title: "Error",

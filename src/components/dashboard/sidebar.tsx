@@ -21,23 +21,28 @@ export function Sidebar() {
 
   const isAdmin = session?.user?.role === "ADMIN";
 
+  // Extract locale from pathname for dynamic links
+  const validLocales = ["en-US", "zh-CN"];
+  const pathnameLocale = pathname?.split("/")[1];
+  const locale = validLocales.includes(pathnameLocale) ? pathnameLocale : "en-US";
+
   const menuItems = [
-    { href: "/en-US/dashboard/new", icon: Plus, label: t("newProject") },
-    { href: "/en-US/dashboard/tasks", icon: ListTodo, label: t("tasks") },
-    { href: "/en-US/dashboard/assets", icon: FolderOpen, label: t("assets") },
-    { href: "/en-US/dashboard/voices", icon: Mic, label: t("voiceLibrary") },
-    { href: "/en-US/dashboard/billing", icon: CreditCard, label: t("credits") },
-    { href: "/en-US/dashboard/settings", icon: Settings, label: t("settings") },
+    { href: `/${locale}/dashboard/new`, icon: Plus, label: t("newProject") },
+    { href: `/${locale}/dashboard/tasks`, icon: ListTodo, label: t("tasks") },
+    { href: `/${locale}/dashboard/assets`, icon: FolderOpen, label: t("assets") },
+    { href: `/${locale}/dashboard/voices`, icon: Mic, label: t("voiceLibrary") },
+    { href: `/${locale}/dashboard/billing`, icon: CreditCard, label: t("credits") },
+    { href: `/${locale}/dashboard/settings`, icon: Settings, label: t("settings") },
   ];
 
   const adminItems = [
-    { href: "/en-US/admin", icon: Shield, label: t("overview") },
+    { href: `/${locale}/admin`, icon: Shield, label: t("overview") },
   ];
 
   return (
     <aside className="w-64 min-h-screen border-r bg-card">
       <div className="p-6">
-        <Link href="/en-US/dashboard" className="flex items-center gap-2 mb-8">
+        <Link href={`/${locale}/dashboard`} className="flex items-center gap-2 mb-8">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
             <span className="text-black font-bold text-sm">CF</span>
           </div>
